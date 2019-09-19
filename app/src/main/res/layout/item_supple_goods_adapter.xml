@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <com.haitaoit.pinpai.view.MyImageView
+        android:id="@+id/iv_hot_img"
+        android:layout_width="180dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img11111"
+        app:my_iv_radius="8dp" />
+
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center|left"
+        android:singleLine="true"
+        android:text="小个子冬裙红色高领连衣裙秋冬女2017新款修身高腰内搭针织包臀裙"
+        android:textColor="@color/c_2c2c2c"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_Prices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="￥ 55.50/个"
+        android:visibility="gone"
+        android:textColor="@color/red_ff_77"
+        android:textSize="11sp" />
+</LinearLayout>

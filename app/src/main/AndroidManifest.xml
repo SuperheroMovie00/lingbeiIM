@@ -1,0 +1,686 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haitaoit.pinpai">
+
+    <permission
+        android:name="com.haitaoit.pinpai.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.haitaoit.pinpai.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+
+
+
+
+
+
+    <application
+        android:name=".ExitApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="jchat.db" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.haitaoit.pinpai.add.database.UserEntry, com.haitaoit.pinpai.add.database.FriendEntry,
+             com.haitaoit.pinpai.add.database.FriendRecommendEntry,com.haitaoit.pinpai.add.database.ConversationEntry" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="4" />
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.haitaoit.pinpai.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".module.loginPage.activity.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".module.homePage.activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--personPage-->
+        <!--账户设置 Person -->
+        <activity android:name=".module.personPage.activity.AccountSettingPersonActivity" />
+        <!--账户设置 Company -->
+        <activity android:name=".module.personPage.activity.AccountSettingCompanyActivity" />
+        <!--修改手机号码-->
+        <activity android:name=".module.personPage.activity.UpdatePhoneActivity" />
+        <!--修改微信号码-->
+        <activity android:name=".module.personPage.activity.UpdateWeChatActivity" />
+        <!--常住地-->
+        <activity android:name=".module.personPage.activity.ChangResidenceActivity" />
+        <!--地址列表-->
+        <activity android:name=".module.personPage.activity.AddressListActivity" />
+
+
+        <!--修改Email号码-->
+        <activity android:name=".module.personPage.activity.EmailActivity" />
+        <!--修改Email号码-->
+        <activity android:name=".module.personPage.activity.EmailOkActivity" />
+
+        <!--常用收货地址-->
+        <activity android:name=".module.personPage.activity.AddressActivity" />
+        <!--国家-->
+        <activity android:name=".module.personPage.activity.CountryActivity" />
+
+        <!--companyPage-->
+        <!--姓名-->
+        <activity android:name=".module.personPage.activity.CompanyNameActivity" />
+        <!--联系方式-->
+        <activity android:name=".module.personPage.activity.CompanyPhoneActivity" />
+        <!--微信、QQ-->
+        <activity android:name=".module.personPage.activity.CompanyWeChatActivity" />
+        <!--QQ-->
+        <activity android:name=".module.personPage.activity.CompanyQQActivity" />
+        <!--邮箱同上-->
+        <!--密码修改-->
+        <activity android:name=".module.loginPage.activity.UpdatePasswordActivity" />
+        <!--常用收货地址同上-->
+
+        <!--我的收藏-->
+        <activity
+            android:name=".module.personPage.activity.MyCollectionActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--我的关注-->
+        <activity android:name=".module.personPage.activity.MyAttentionActivity" />
+        <!--供应商认证-->
+        <activity android:name=".module.personPage.activity.SupplierActivity" />
+        <!--我的货源-->
+        <activity
+            android:name=".module.personPage.activity.MySupplyGoodsActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--我的货源詳情-->
+        <activity android:name=".module.personPage.activity.SupplyDetailActivity" />
+        <!--查找同款商品-->
+        <activity android:name=".module.homePage.activity.ParagraphGOodsActivity" />
+        <!--查找同款求购-->
+        <activity android:name=".module.homePage.activity.ParagraphWantActivity" />
+
+
+        <!--编辑货源-->
+        <activity android:name=".module.personPage.activity.EditorSupplyActivity" />
+        <!--编辑求购-->
+        <activity android:name=".module.personPage.activity.EditorWantBuyActivity" />
+        <!--城市-->
+        <activity android:name=".module.personPage.activity.CityActivity" />
+
+        <!--我的求购-->
+        <activity
+            android:name=".module.personPage.activity.MySupplyBuyActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--我的求购詳情-->
+        <activity android:name=".module.personPage.activity.WantBuyDetailsActivity" />
+
+        <!--我的消息-->
+        <activity android:name=".module.personPage.activity.MyMessageActivity" />
+        <!--消息详情-->
+        <activity android:name=".module.personPage.activity.MessageDetailActivity" />
+
+
+        <!--一键分享货源-->
+        <activity
+            android:name=".module.personPage.activity.OneButtonGoodsActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--一键分享求购-->
+        <activity
+            android:name=".module.personPage.activity.OneButtonBuyActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!--个人认证-->
+        <activity android:name=".module.personPage.activity.PersonAuthActivity" />
+        <!--企业认证-->
+        <activity android:name=".module.personPage.activity.CompanyAuthActivity" />
+        <!--认证成功-->
+        <activity android:name=".module.personPage.activity.AnthSuccessActivity" />
+        <!--企业失败-->
+        <activity android:name=".module.personPage.activity.AnthErrorActivity" />
+        <!--个人主页-->
+        <activity android:name=".module.personPage.activity.PersonHomePageActivity" />
+
+        <!--我的设置-->
+        <activity android:name=".module.personPage.activity.MySettingActivity" />
+        <!--消息退送-->
+        <activity android:name=".module.personPage.activity.MessagePushActivity" />
+        <!--帮助中心-->
+        <activity android:name=".module.personPage.activity.HelpCenterActivity" />
+        <!--关于拎贝-->
+        <activity android:name=".module.personPage.activity.AboutLinBeiActivity" />
+        <!--意见反馈-->
+        <activity android:name=".module.personPage.activity.SuggestionActivity" />
+        <activity
+            android:name=".module.findPage.activity.SearchQiuActivcty"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <!--loginPage-->
+        <!--登录-->
+        <activity android:name=".module.loginPage.activity.LoginActivity" />
+        <!--注册-->
+        <activity android:name=".module.loginPage.activity.RegisterActivity" />
+        <!--注册下一步-->
+        <activity android:name=".module.loginPage.activity.RegisterNextActivity" />
+        <!--注册成功-->
+        <activity android:name=".module.loginPage.activity.RegisterSuccessActivity" />
+        <!--忘记密码-->
+        <activity android:name=".module.loginPage.activity.ForgetPassActivity" />
+        <!--忘记密码下一步-->
+        <activity android:name=".module.loginPage.activity.ForgetPassNextActivity" />
+        <!--用户协议-->
+        <activity android:name=".module.loginPage.activity.UserXieYiActivty" />
+
+
+        <!--releasePage-->
+        <!--发布 -->
+        <activity android:name=".module.releasePage.activity.ReplaceActivity" />
+        <!--发布货源 -->
+        <activity android:name=".module.releasePage.activity.ReleaseSourceActivity" />
+        <!--发布求购-->
+        <activity android:name=".module.releasePage.activity.ReleaseBegBuyActivity" />
+        <!--商品一级分类列表-->
+        <activity android:name=".module.releasePage.activity.ParentCateListActivity" />
+        <!--产地-->
+        <activity android:name=".module.releasePage.activity.AddressCityActivity" />
+
+
+        <!--FindPage-->
+        <!--商品详情 -->
+        <activity android:name=".module.findPage.activity.SupplyGoodsDetailActivity" />
+        <!--商品查找 -->
+        <activity
+            android:name=".module.findPage.activity.SearchDateActivcty"
+            android:windowSoftInputMode="adjustPan" />
+        <!--商品帥選 -->
+        <activity
+            android:name=".module.findPage.activity.ScreenActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--推荐采购-->
+        <activity
+            android:name=".module.findPage.activity.PurchaseGoodsDetailActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <!--HomePage-->
+        <!--首页排名 -->
+        <activity android:name=".module.homePage.activity.BeatDataActivity" />
+        <!--首页搜索-->
+        <activity
+            android:name=".module.homePage.activity.HomeSearchActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--首页结果-->
+        <activity
+            android:name=".module.homePage.activity.SearchListActivcty"
+            android:windowSoftInputMode="adjustPan" />
+        <!--首页為空-->
+        <activity
+            android:name=".module.homePage.activity.CantFindActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".module.personPage.activity.TextActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!--发布成功-->
+        <activity
+            android:name=".module.releasePage.activity.ReleaseSuccessActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--发布失敗-->
+        <activity
+            android:name=".module.releasePage.activity.ReleaseErrorActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.haitaoit.pinpai.add.activity.BaseActivity" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.FinishRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.AboutJChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <!-- 这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效 -->
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.PersonalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.NickSignActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchForAddFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchFriendInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.FriendRecommendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchFriendDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.utils.imagepicker.ImageBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.utils.imagepicker.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerTheme" />
+        <activity
+            android:name="com.haitaoit.pinpai.utils.imagepicker.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerTheme" />
+        <activity
+            android:name="com.haitaoit.pinpai.utils.imagepicker.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name="com.haitaoit.pinpai.utils.imagepicker.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.pickerimage.PickerAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.pickerimage.PickerAlbumPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.pickerimage.PickImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.BrowserViewPagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.historyfile.activity.BrowserFileImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.WatchVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SendFileActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.historyfile.activity.HistoryFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.PlayVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.location.activity.MapPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.FriendInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.ChatDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.MembersInChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.GroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchMoreFriendsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchMoreGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.FriendSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SetNoteNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.ChooseAtMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.GroupGridViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.GroupNotFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SelectFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.DownLoadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.CreateGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.haitaoit.pinpai.utils.photovideo.takevideo.CameraActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseFullTheme" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchAtMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.ForwardMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.Person2CodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.ScanResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.CommonScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.receiptmessage.ReceiptMessageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.SearchFriendBusinessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.FriendListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.NotFriendSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.GroupAvatarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTh" />
+
+        <activity
+            android:name="com.haitaoit.pinpai.add.activity.UpdateRemarkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTh" />
+
+
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle"></activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.haitaoit.pinpai" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.haitaoit.pinpai.DataProvider"
+            android:exported="false" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.haitaoit.pinpai" />
+            </intent-filter>
+
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能-->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.haitaoit.pinpai.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.haitaoit.pinpai" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.im.android.helpers.IMReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.im.android.action.IM_RESPONSE" />
+                <action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY" />
+
+                <category android:name="com.haitaoit.pinpai" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.haitaoit.pinpai.receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.haitaoit.pinpai" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <receiver android:name="com.haitaoit.pinpai.receiver.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.haitaoit.pinpai"></category>
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="055c07ecf15e18b88ea3d7ba" /> <!--  </>值来自开发者平台取得的AppKey-->
+
+
+        <activity
+            android:name="cn.jiguang.share.android.ui.JiguangShellActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <!--SDK_V2.0引入了AssistActivity，开发者需在androidManifest.xml中注册。代码如下：-->
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!--微信登录配置 start-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:theme="@style/wx_login_style" />
+        <!--微信登录配置 end-->
+
+
+    </application>
+
+
+</manifest>

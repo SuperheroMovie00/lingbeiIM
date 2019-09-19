@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@id/pcfl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="2.1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_collec_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="false"
+        app:title="绑定成功"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/img26" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="邮箱绑定成功!"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_EmailNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="邮箱绑定成功!"
+            android:textSize="12sp" />
+
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_IDO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="我知道了"
+            android:textColor="@color/gray_89"
+            android:textSize="12sp"
+            app:my_tv_border_color="@color/gray_89"
+            app:my_tv_border_width="0.5dp"
+            app:my_tv_corner_radius="20dp" />
+
+    </com.github.customview.MyLinearLayout>
+
+</LinearLayout>

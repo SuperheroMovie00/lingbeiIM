@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/jmui_chat_item_receive_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.github.customview.MyTextView
+        android:id="@+id/jmui_send_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="2017-08-25  25:25"
+        android:textColor="#fffefe"
+        android:textSize="10sp"
+        app:my_tv_corner_radius="5dp"
+        app:my_tv_solid="#c9c9c9" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/jmui_avatar_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/img32" />
+
+        <TextView
+            android:id="@+id/jmui_display_name_tv"
+            style="@style/jmui_chat_display_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/jmui_avatar_iv"/>
+
+        <FrameLayout
+            android:id="@+id/jmui_voice_fl"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/jmui_display_name_tv"
+            android:layout_toRightOf="@id/jmui_avatar_iv"
+            android:gravity="left">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/jmui_msg_content"
+                    style="@style/jmui_chat_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/receive_msg_normal"
+                    android:maxWidth="220dp"/>
+
+                <ImageView
+                    android:id="@+id/jmui_voice_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/jmui_voice_receive"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginRight="14dp"
+                android:layout_gravity="center_vertical|end"
+                android:id="@+id/jmui_voice_length_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jmui_display_name_tv"
+                android:text="@string/jmui_voice_length"
+                android:textColor="#555555"
+                android:textSize="12sp"/>
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/jmui_read_status_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jmui_display_name_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@id/jmui_voice_fl"
+            android:background="@drawable/jmui_voice_unread"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

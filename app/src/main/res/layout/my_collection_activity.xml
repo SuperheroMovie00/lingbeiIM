@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:rightTextVisibility="false"
+        app:rightIconVisibility="true"
+        app:title="我的收藏"
+        app:rightIcon="@mipmap/img96"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+
+    <com.github.customview.MyLinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        app:my_ll_bottom_line="true"
+        app:my_ll_solid="@color/white">
+
+
+        <EditText
+            android:id="@+id/tv_search_goods"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@mipmap/img1"
+            android:drawablePadding="10dp"
+            android:gravity="center|left"
+            android:hint="请输入商品名，关键词或者商品条形码"
+            android:imeOptions="actionSearch"
+            android:padding="8dp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/c_2c2c2c"
+            android:textColorHint="@color/c_bfbfbf"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_SearchClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@mipmap/img1"
+            android:visibility="gone" />
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="搜索"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:my_tv_corner_radius="3dp"
+            app:my_tv_solid="@color/red_ff_8a" />
+
+    </com.github.customview.MyLinearLayout>
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioGroup
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            app:my_ll_bottom_line="true"
+            app:my_ll_solid="@color/white">
+
+            <com.github.customview.MyRadioButton
+                android:id="@+id/cb_replace_sort"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:ems="5"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="货源"
+                android:textSize="11sp"
+                app:my_radio_checked="@mipmap/img100"
+                app:my_radio_checked_color="@color/red_ff_77"
+                app:my_radio_checked_drawable="left"
+                app:my_radio_normal="@mipmap/img102"
+                app:my_radio_normal_color="@color/c_2c2c2c" />
+
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#d7d7d7" />
+
+            <com.github.customview.MyRadioButton
+                android:id="@+id/cb_replace_hot"
+
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:ems="5"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="求购"
+                android:textSize="11sp"
+                app:my_radio_checked="@mipmap/img103"
+                app:my_radio_checked_color="@color/red_ff_77"
+                app:my_radio_checked_drawable="left"
+                app:my_radio_normal="@mipmap/img101"
+                app:my_radio_normal_color="@color/c_2c2c2c" />
+
+
+        </RadioGroup>
+
+
+    </com.github.customview.MyLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#d7d7d7" />
+
+    <com.github.customview.MyLinearLayout
+        android:id="@+id/ll_date_max"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pcfl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_collec_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </com.github.customview.MyLinearLayout>
+
+
+    <com.github.customview.MyLinearLayout
+        android:id="@+id/ll_date_min"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/img55" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:text="你还没有收藏任何商品"
+            android:textSize="12sp" />
+
+
+    </com.github.customview.MyLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#d7d7d7" />
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <com.github.customview.MyCheckBox
+            android:id="@+id/tv_select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="全选"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:my_checkbox_checked="@mipmap/img78"
+            app:my_checkbox_checked_drawable="left"
+            app:my_checkbox_normal="@mipmap/img79" />
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="8dp"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:my_tv_corner_radius="3dp"
+            app:my_tv_solid="@color/red_ff_8a" />
+
+    </RelativeLayout>
+
+</LinearLayout>

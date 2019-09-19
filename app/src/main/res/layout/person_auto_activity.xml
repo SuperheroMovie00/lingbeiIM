@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:title="个人认证"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:orientation="vertical">
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="真实姓名"
+                android:textColor="@color/gray_33"
+                android:textSize="11sp" />
+
+
+            <EditText
+                android:id="@+id/et_really_name"
+                android:layout_width="0dp"
+                android:text=""
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="真实姓名"
+                android:maxLines="1"
+                android:textColor="@color/gray_33"
+                android:textColorHint="@color/c_bfbfbf"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="性别"
+                android:textColor="@color/gray_33"
+                android:textSize="11sp" />
+
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/img68"
+                android:gravity="center_vertical|left"
+                android:hint="性别"
+                android:paddingRight="10dp"
+                android:textColor="@color/gray_33"
+                android:textColorHint="@color/c_bfbfbf"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="联系电话"
+                android:textColor="@color/gray_33"
+                android:textSize="11sp" />
+
+
+            <EditText
+                android:id="@+id/et_really_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="联系电话"
+                android:inputType="number"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/gray_33"
+                android:textColorHint="@color/c_bfbfbf"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="邮箱绑定"
+                android:textColor="@color/gray_33"
+                android:textSize="11sp" />
+
+
+            <EditText
+                android:id="@+id/et_really_email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="邮箱绑定必填"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/gray_33"
+                android:textColorHint="@color/c_bfbfbf"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="身份证号"
+                android:textColor="@color/gray_33"
+                android:textSize="11sp" />
+
+
+            <EditText
+                android:id="@+id/et_really_Id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="身份证号"
+                android:maxLength="18"
+                android:text=""
+                android:maxLines="1"
+                android:textColor="@color/gray_33"
+                android:textColorHint="@color/c_bfbfbf"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="15dp"
+                android:text="证件照片"
+                android:textColor="@color/gray_33"
+                android:textSize="11sp" />
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.github.customview.MyLinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:my_ll_corner_radius="4dp"
+                    app:my_ll_solid="@color/wheel_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_IDCardOne"
+                        android:layout_width="78dp"
+                        android:layout_height="65dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img52" />
+
+
+                </com.github.customview.MyLinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="身份证正面"
+                    android:textColor="@color/gray_89"
+                    android:textSize="10sp" />
+            </com.github.customview.MyLinearLayout>
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.github.customview.MyLinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:my_ll_corner_radius="4dp"
+                    app:my_ll_solid="@color/wheel_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_IDCardTwo"
+                        android:layout_width="78dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img53" />
+
+
+                </com.github.customview.MyLinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="身份证反面"
+                    android:textColor="@color/gray_89"
+                    android:textSize="10sp" />
+            </com.github.customview.MyLinearLayout>
+        </com.github.customview.MyLinearLayout>
+
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:gravity="center|left"
+                android:text="图片大小不超过500K"
+                android:textColor="@color/gray_89"
+                android:textSize="10sp" />
+
+        </com.github.customview.MyLinearLayout>
+    </LinearLayout>
+
+
+    <com.github.customview.MyTextView
+        android:id="@+id/tv_Submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="提交认证资料"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:my_tv_corner_radius="3dp"
+        app:my_tv_solid="@color/red_ff_77" />
+
+
+</LinearLayout>

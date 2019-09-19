@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="175dp"
+    android:layout_height="150dp"
+    android:gravity="center"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp">
+
+
+    <com.haitaoit.pinpai.view.MyImageView
+        android:id="@+id/iv_hot_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/imgbg1"
+        app:my_iv_radius="4dp" />
+
+
+    <com.github.customview.MyLinearLayout
+        android:id="@+id/ll_addRemark"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:my_ll_corner_radius="4dp"
+        app:my_ll_solid="#996b675e">
+
+        <TextView
+            android:id="@+id/tv_RemarkName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="时尚女神心水好物"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_RemarkCate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="单品专场"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white" />
+    </com.github.customview.MyLinearLayout>
+
+
+</RelativeLayout>

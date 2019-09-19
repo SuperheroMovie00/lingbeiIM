@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.github.customview.MyLinearLayout
+            android:id="@+id/ll_date_max"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="visible"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/img82" />
+
+            <com.github.customview.MyLinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                app:my_ll_bottom_line="true"
+                app:my_ll_solid="@color/white">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_white_alpha_stoke"
+                        android:orientation="horizontal">
+
+
+                        <com.github.customview.MyEditText
+                            android:id="@+id/tv_search_goods"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawableLeft="@mipmap/img1"
+                            android:drawablePadding="10dp"
+                            android:gravity="center|left"
+                            android:hint="请输入搜索的关键词"
+                            android:imeOptions="actionSearch"
+                            android:padding="8dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_33"
+                            android:textColorHint="@color/c_bfbfbf"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_SearchClose"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="8dp"
+                            android:visibility="gone"
+                            android:src="@mipmap/img1" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#d7d7d7" />
+                </LinearLayout>
+
+                <com.github.customview.MyTextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="搜索"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:my_tv_corner_radius="3dp"
+                    app:my_tv_solid="@color/red_ff_8a" />
+
+            </com.github.customview.MyLinearLayout>
+
+        </com.github.customview.MyLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d7d7d7" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:padding="12dp"
+                android:paddingLeft="15dp"
+                android:text="没有找到相关商品"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#d7d7d7" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:padding="12dp"
+                android:paddingLeft="15dp"
+                android:text="换个词试试，或者可以添加新产品并发布哦"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#d7d7d7" />
+
+
+            <com.github.customview.MyTextView
+                android:id="@+id/tv_AddShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="添加新产品并发布"
+                android:textColor="@color/red_ff_77"
+                android:textSize="14sp"
+                app:my_tv_border_color="@color/red_ff_77"
+                app:my_tv_border_width="0.5dp"
+                app:my_tv_corner_radius="20dp"
+                app:my_tv_solid="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

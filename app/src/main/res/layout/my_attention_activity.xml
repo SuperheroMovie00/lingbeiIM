@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:rightText="编辑"
+        app:rightTextVisibility="true"
+        app:title="我的关注"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+
+    <com.github.customview.MyLinearLayout
+        android:id="@+id/ll_date_max"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:my_ll_bottom_line="true"
+        app:my_ll_solid="@color/white">
+
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pcfl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_collec_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </com.github.customview.MyLinearLayout>
+
+
+    <com.github.customview.MyLinearLayout
+        android:id="@+id/ll_date_min"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/img54" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:text="你还没有任何关注"
+            android:textSize="12sp" />
+
+
+    </com.github.customview.MyLinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.github.customview.MyCheckBox
+            android:id="@+id/tv_select_all"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="全选"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:my_checkbox_checked="@mipmap/img78"
+            app:my_checkbox_checked_drawable="left"
+            app:my_checkbox_normal="@mipmap/img79" />
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="8dp"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:my_tv_corner_radius="3dp"
+            app:my_tv_solid="@color/red_ff_8a" />
+
+    </RelativeLayout>
+</LinearLayout>

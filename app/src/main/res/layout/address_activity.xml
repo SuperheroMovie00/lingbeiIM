@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:title="常用收发货地址"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="联系人"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="11sp" />
+
+
+            <EditText
+                android:id="@+id/et_call_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:maxLines="1"
+                android:textColor="@color/c_2c2c2c"
+                android:textColorHint="@color/colorText"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="联系电话"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="11sp" />
+
+
+            <EditText
+
+                android:id="@+id/et_call_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/c_2c2c2c"
+                android:textColorHint="@color/colorText"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="所在国家"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_call_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/img68"
+                android:gravity="center_vertical|right"
+                android:hint="请选择"
+                android:maxLines="1"
+                android:paddingRight="10dp"
+                android:textColor="@color/c_2c2c2c"
+                android:textColorHint="@color/colorText"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="所在城市"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_call_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/img68"
+                android:gravity="center_vertical|right"
+                android:hint="请选择"
+                android:maxLines="1"
+                android:paddingRight="10dp"
+                android:textColor="@color/c_2c2c2c"
+                android:textColorHint="@color/colorText"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="邮编"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="11sp" />
+
+
+            <EditText
+                android:id="@+id/et_call_zipcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/gray_66"
+                android:textColorHint="@color/colorText"
+                android:textSize="14sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+
+            <EditText
+                android:id="@+id/et_call_detail_address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center|left|top"
+                android:hint="详细地址"
+                android:maxLines="1"
+                android:paddingTop="5dp"
+                android:textColor="@color/gray_66"
+                android:textColorHint="@color/colorText"
+                android:textSize="11sp" />
+
+
+        </com.github.customview.MyLinearLayout>
+
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            app:my_ll_corner_radius="4dp"
+            app:my_ll_solid="@color/gray_f6">
+
+            <com.github.customview.MyCheckBox
+                android:id="@+id/cb_call_default"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:button="@null"
+                android:ems="5"
+                android:padding="5dp"
+                android:drawablePadding="10dp"
+                android:text="设置为默认地址"
+                android:textSize="11sp"
+                app:my_checkbox_checked="@mipmap/img78"
+                app:my_checkbox_checked_color="@color/red_ff_77"
+                app:my_checkbox_checked_drawable="left"
+                app:my_checkbox_normal="@mipmap/img79"
+                app:my_checkbox_normal_color="@color/c_2c2c2c" />
+        </com.github.customview.MyLinearLayout>
+    </LinearLayout>
+
+
+    <com.github.customview.MyTextView
+        android:id="@+id/tv_sava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:my_tv_corner_radius="3dp"
+        app:my_tv_solid="@color/red_ff_77" />
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyImageView">
+        <attr name="my_iv_radius" format="dimension"/>
+        <attr name="my_iv_topLeftRadius" format="dimension"/>
+        <attr name="my_iv_topRightRadius" format="dimension"/>
+        <attr name="my_iv_bottomLeftRadius" format="dimension"/>
+        <attr name="my_iv_bottomRightRadius" format="dimension"/>
+    </declare-styleable>
+</resources>

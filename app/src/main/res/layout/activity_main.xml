@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/layout_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+       ></FrameLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/rg_main"
+    />
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.github.customview.MyRadioButton
+            android:id="@+id/rb_home_page"
+            style="@style/radio_main"
+            android:checked="true"
+            android:text="首页"
+            app:my_radio_checked="@mipmap/img22_1"
+            app:my_radio_checked_color="@color/red_ff_7f"
+            app:my_radio_checked_drawable="top"
+            app:my_radio_normal="@mipmap/img22"
+            app:my_radio_normal_color="@color/black_ff_7f" />
+
+        <com.github.customview.MyRadioButton
+            android:id="@+id/rb_find_page"
+            style="@style/radio_main"
+            android:text="发现"
+            app:my_radio_checked="@mipmap/img23_1"
+            app:my_radio_checked_color="@color/red_ff_7f"
+            app:my_radio_checked_drawable="top"
+            app:my_radio_normal="@mipmap/img23"
+            app:my_radio_normal_color="@color/black_ff_7f" />
+
+
+        <LinearLayout
+            android:id="@+id/lin_replace_page"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/img21" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="发布"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <com.github.customview.MyRadioButton
+            style="@style/radio_main"
+            android:text="消息"
+            android:id="@+id/rb_message_page"
+            app:my_radio_checked="@mipmap/img24_1"
+            app:my_radio_checked_color="@color/red_ff_7f"
+            app:my_radio_checked_drawable="top"
+            app:my_radio_normal="@mipmap/img24"
+            app:my_radio_normal_color="@color/black_ff_7f" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="fill_parent"
+            android:background="@color/white">
+            <com.github.customview.MyRadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:gravity="center"
+                android:button="@null"
+                android:textSize="10sp"
+                android:background="@null"
+                android:drawablePadding="2dp"
+                app:my_radio_checked="@mipmap/img24_1"
+                app:my_radio_checked_color="@color/red_ff_7f"
+                app:my_radio_checked_drawable="top"
+                app:my_radio_normal="@mipmap/img24"
+                app:my_radio_normal_color="@color/black_ff_7f" />
+
+            <!--<TextView-->
+                <!--android:layout_width="10dp"-->
+                <!--android:layout_height="10dp"-->
+                <!--android:layout_alignRight="@+id/rb_message_page"-->
+                <!--android:layout_alignTop="@+id/rb_message_page"-->
+                <!--android:background="@drawable/shape_oval_red"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="1"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="12sp" />-->
+        </RelativeLayout>
+
+        <com.github.customview.MyRadioButton
+            android:id="@+id/rb_person_page"
+            style="@style/radio_main"
+            android:text="我的"
+            app:my_radio_checked="@mipmap/img25_1"
+            app:my_radio_checked_color="@color/red_ff_7f"
+            app:my_radio_checked_drawable="top"
+            app:my_radio_normal="@mipmap/img25"
+            app:my_radio_normal_color="@color/black_ff_7f" />
+    </RadioGroup>
+</LinearLayout>

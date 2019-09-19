@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_collapseMode="pin"
+        app:titleTextColor="@color/gray_66">
+
+        <TextView
+            android:id="@id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/gray_66"
+            android:textSize="19sp"
+            tools:text="title" />
+
+        <ImageView
+            android:id="@id/app_right_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:maxHeight="?attr/actionBarSize"
+            android:paddingRight="10dp"
+            android:src="@mipmap/img63"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/app_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:maxLines="1"
+            android:textColor="@color/gray_66"
+            android:textSize="16sp"
+            tools:text="right_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/v_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c_divider" />
+</LinearLayout>

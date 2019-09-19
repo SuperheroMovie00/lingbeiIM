@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:my_ll_corner_radius="3dp"
+        app:my_ll_solid="@color/white">
+
+        <com.github.customview.MyCheckBox
+            android:id="@+id/CheckBox_defeult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:padding="5dp"
+            android:visibility="gone"
+            app:my_checkbox_checked="@mipmap/img78"
+            app:my_checkbox_checked_drawable="left"
+            app:my_checkbox_normal="@mipmap/img79" />
+
+        <ImageView
+            android:id="@+id/iv_collect_img"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="淘宝衣服商户号郭德纲尴尬的啦啦啦啦多来来来"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/tv_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="发布时间：2017-02-30"
+                android:textColor="@color/gray_89"
+                android:textSize="10sp" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="可爱猫咪"
+                        android:textColor="@color/gray_89"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_Qiuhuodi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="求货地：大返|日本"
+                        android:textColor="@color/gray_89"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/Tv_Collection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@mipmap/img70"
+                        android:gravity="center"
+                        android:text="收藏"
+                        android:textColor="@color/gray_89"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.github.customview.MyLinearLayout>
+</LinearLayout>

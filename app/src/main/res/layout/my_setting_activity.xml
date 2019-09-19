@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:title="设置"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_setting_update"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/img68"
+            android:text="修改密码"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_setting_messgae"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/img68"
+            android:text="消息提醒  "
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_setting_ClearCache"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清楚缓存 "
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:gravity="center|left"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/clear_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:textSize="11sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_setting_help"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/img68"
+            android:text="帮助中心"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/ll_setting_aboutMe"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/img68"
+            android:text="关于拎贝"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_setting_suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/img68"
+            android:text="意见反馈"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+    <com.github.customview.MyTextView
+        android:id="@+id/tv_Exitlogin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:my_tv_corner_radius="3dp"
+        app:my_tv_solid="@color/red_ff_77" />
+
+</LinearLayout>

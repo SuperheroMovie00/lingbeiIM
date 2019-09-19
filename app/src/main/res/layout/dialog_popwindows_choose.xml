@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dip">
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/photo_cancel_selector"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_camera_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:padding="5dp"
+                android:text="是否显示价格:"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/Rb_InvisPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="显示"
+                    android:textSize="12sp"
+                    app:my_radio_checked="@mipmap/img78"
+                    app:my_radio_checked_color="@color/red_ff_77"
+                    app:my_radio_checked_drawable="left"
+                    app:my_radio_normal="@mipmap/img79"
+                    app:my_radio_normal_color="@color/c_2c2c2c" />
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/Rb_OnvisPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="不显示"
+                    android:textSize="12sp"
+                    app:my_radio_checked="@mipmap/img78"
+                    app:my_radio_checked_color="@color/red_ff_77"
+                    app:my_radio_checked_drawable="left"
+                    app:my_radio_normal="@mipmap/img79"
+                    app:my_radio_normal_color="@color/c_2c2c2c" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#DAD9DB" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_camera_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:padding="5dp"
+                android:text="是否显示数量:"
+                android:textColor="@color/c_2c2c2c"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/Rb_InvisNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="显示"
+                    android:textSize="12sp"
+                    app:my_radio_checked="@mipmap/img78"
+                    app:my_radio_checked_color="@color/red_ff_77"
+                    app:my_radio_checked_drawable="left"
+                    app:my_radio_normal="@mipmap/img79"
+                    app:my_radio_normal_color="@color/c_2c2c2c" />
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/Rb_OnvisNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="不显示"
+                    android:textSize="12sp"
+                    app:my_radio_checked="@mipmap/img78"
+                    app:my_radio_checked_color="@color/red_ff_77"
+                    app:my_radio_checked_drawable="left"
+                    app:my_radio_normal="@mipmap/img79"
+                    app:my_radio_normal_color="@color/c_2c2c2c" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </com.github.customview.MyLinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/photo_cancel_selector"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="分享"
+        android:textColor="@color/c_2c2c2c"
+        android:textSize="14sp" />
+
+</LinearLayout>

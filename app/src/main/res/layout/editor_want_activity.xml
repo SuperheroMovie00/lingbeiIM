@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:title="编辑"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_home"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/red_ff_77"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:text="求购量价格"
+                        android:textColor="@color/c_2c2c2c"
+                        android:textSize="14sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:text="(最多允许输入三组)"
+                            android:textColor="@color/c_bfbfbf"
+                            android:textSize="11sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_replace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginRight="15dp"
+                            android:text="重置"
+                            android:textColor="@color/c_bfbfbf"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+
+                    <com.github.customview.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="求购数量"
+                        android:textColor="@color/c_2c2c2c"
+                        android:textSize="12sp" />
+
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="fill_parent"
+                        android:background="#d7d7d7"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" />
+
+
+                    <com.github.customview.MyTextView
+                        android:id="@+id/my_tv_editor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="求购价格"
+                        android:textColor="@color/c_2c2c2c"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.20dp"
+                    android:background="@color/gray_d7" />
+
+                <LinearLayout
+                    android:id="@+id/layout01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_Add_prices"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/tv_AddShop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加"
+                        android:textColor="@color/c_bfbfbf"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/red_ff_77"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="8dp"
+                        android:text="库存："
+                        android:textColor="@color/c_2c2c2c"
+                        android:textSize="14sp" />
+
+                    <com.github.customview.MyEditText
+                        android:id="@+id/tv_StockNum"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:hint="请输入库存"
+                        android:padding="8dp"
+                        android:textColor="@color/red_ff_8a"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="8dp"
+                        android:text="件"
+                        android:textColor="@color/red_ff_8a"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/red_ff_77"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:text="详细信息"
+                        android:textColor="@color/c_2c2c2c"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <com.github.customview.MyLinearLayout
+                        android:id="@+id/ll_Goods_Sources"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        app:my_ll_corner_radius="4dp"
+                        app:my_ll_solid="@color/gray_f6">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="求购地"
+                            android:textColor="@color/c_2c2c2c"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_Goods_Sources"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/img68"
+                            android:gravity="center|left"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="@color/gray_89"
+                            android:textSize="12sp" />
+
+
+                    </com.github.customview.MyLinearLayout>
+
+                    <com.github.customview.MyLinearLayout
+                        android:id="@+id/ll_Delivery_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        app:my_ll_corner_radius="4dp"
+                        app:my_ll_solid="@color/gray_f6">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="交货时间"
+                            android:textColor="@color/c_2c2c2c"
+                            android:textSize="12sp" />
+
+
+                        <EditText
+                            android:id="@+id/tv_Delivery_time"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/img68"
+                            android:gravity="center|left"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="@color/gray_89"
+                            android:textSize="12sp" />
+
+
+                    </com.github.customview.MyLinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.50dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/gray_d7" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.github.customview.MyTextView
+                android:id="@+id/tv_sava"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:my_tv_corner_radius="3dp"
+                app:my_tv_solid="@color/red_ff_77"></com.github.customview.MyTextView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:title="发布商品"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ll_date_max"
+            android:orientation="vertical">
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <com.github.customview.MyLinearLayout
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    app:my_ll_bottom_line="true"
+                    app:my_ll_solid="@color/white">
+
+
+                    <com.github.customview.MyEditText
+                        android:id="@+id/tv_search_goods"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@mipmap/img1"
+                        android:gravity="center|left"
+                        android:hint="搜索产品名，关键词或者商品条形码"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_89"
+                        android:textColorHint="@color/text_color_9"
+                        android:textSize="12sp"
+                        app:my_et_border_color="#e5e5e5"
+                        app:my_et_border_width="0.7dp"
+                        app:my_et_corner_radius="4dp" />
+
+
+                    <com.github.customview.MyTextView
+                        android:id="@+id/tv_cancel"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="搜索"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:my_tv_corner_radius="3dp"
+                        app:my_tv_solid="@color/red_ff_8a" />
+
+                </com.github.customview.MyLinearLayout>
+
+            </com.github.customview.MyLinearLayout>
+
+
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pcfl_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                cube_ptr:ptr_keep_header_when_refresh="true"
+                cube_ptr:ptr_pull_to_fresh="false"
+                cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+                cube_ptr:ptr_resistance="1.7">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_collec_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+        </LinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:id="@+id/ll_date_min"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/img56" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="没有找到相同或类似的信息哦"
+                android:textColor="@color/gray_89"
+                android:textSize="12sp" />
+
+
+            <com.github.customview.MyTextView
+                android:id="@+id/tv_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="提交新货源信息并发布"
+                android:textColor="@color/red_ff_77"
+                android:textSize="12sp"
+                app:my_tv_border_color="@color/red_ff_77"
+                app:my_tv_border_width="0.5dp"
+                app:my_tv_corner_radius="25dp"
+                app:my_tv_solid="@color/white" />
+
+        </com.github.customview.MyLinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_NotReplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="没有找到你的产品?"
+            android:textColor="@color/c_2c2c2c"
+            android:textSize="15sp"
+          />
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_NewReplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="提交新产品信息并发布"
+            android:textColor="@color/red_ff_77"
+            android:textSize="12sp"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

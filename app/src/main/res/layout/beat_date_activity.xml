@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+
+
+
+        <com.vondear.rxtools.view.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_ff_7f"
+            app:leftIcon="@mipmap/img81"
+            app:leftIconVisibility="true"
+            app:leftTextColor="@color/blue_58"
+            app:rightIcon="@mipmap/img81"
+            app:rightIconVisibility="false"
+            app:title="拎贝数据"
+            app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_main"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                app:my_ll_bottom_line="true"
+                app:my_ll_solid="@color/white">
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/rb_Beat_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/date_change_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="交易排名"
+                    android:textColor="@color/date_change_color"
+                    android:textSize="13sp" />
+
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/rb_Beat_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/date_change_bg"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="发布排名"
+                    android:textColor="@color/date_change_color"
+                    android:textSize="13sp" />
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/rb_Beat_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/date_change_bg"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="浏览排名"
+                    android:textColor="@color/date_change_color"
+                    android:textSize="13sp" />
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/rb_Beat_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/date_change_bg"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="关注排名"
+                    android:textColor="@color/date_change_color"
+                    android:textSize="13sp" />
+
+            </RadioGroup>
+
+
+        </com.github.customview.MyLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#d7d7d7" />
+    <FrameLayout
+        android:id="@+id/layout_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"></FrameLayout>
+
+
+</LinearLayout>

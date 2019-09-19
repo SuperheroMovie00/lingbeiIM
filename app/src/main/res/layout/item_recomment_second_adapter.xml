@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <com.haitaoit.pinpai.view.MyImageView
+            android:id="@+id/iv_hot_img"
+            android:layout_width="fill_parent"
+            android:layout_height="85dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/imgbg2"
+            app:my_iv_radius="4dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/ll_More"
+            android:orientation="vertical">
+
+            <com.haitaoit.pinpai.view.MyImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/more"
+                app:my_iv_radius="4dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_PriceNum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="￥55.50/个"
+        android:singleLine="true"
+        android:textColor="@color/c_2c2c2c"
+        android:textSize="11sp" />
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.vondear.rxtools.view.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_ff_8a"
+            app:leftIcon="@mipmap/img81"
+            app:leftIconVisibility="true"
+            app:leftTextColor="@color/blue_58"
+            app:rightIcon="@mipmap/img63"
+            app:rightIconVisibility="false"
+            app:title="消息"
+            app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7" />
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                app:my_ll_bottom_line="true"
+                app:my_ll_solid="@color/white">
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/cb_replace_sort"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="用户消息"
+                    android:checked="true"
+                    android:textSize="11sp"
+                    app:my_radio_checked="@mipmap/img74"
+                    app:my_radio_checked_color="@color/red_ff_77"
+                    app:my_radio_checked_drawable="left"
+                    app:my_radio_normal="@mipmap/img74"
+                    app:my_radio_normal_color="@color/c_2c2c2c" />
+
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#d7d7d7" />
+
+                <com.github.customview.MyRadioButton
+                    android:id="@+id/cb_replace_hot"
+
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="平台消息"
+                    android:textSize="11sp"
+                    app:my_radio_checked="@mipmap/img75"
+                    app:my_radio_checked_color="@color/red_ff_77"
+                    app:my_radio_checked_drawable="left"
+                    app:my_radio_normal="@mipmap/img75"
+                    app:my_radio_normal_color="@color/c_2c2c2c" />
+
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_above="@+id/rg_main"
+                android:background="@color/gray_d7" />
+
+
+        </com.github.customview.MyLinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="@drawable/tab_bg"></FrameLayout>
+
+
+</LinearLayout>

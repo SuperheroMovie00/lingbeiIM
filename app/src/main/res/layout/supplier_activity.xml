@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <com.vondear.rxtools.view.RxTitle
+        android:id="@+id/rx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff_8a"
+        app:leftIcon="@mipmap/img81"
+        app:leftIconVisibility="true"
+        app:leftTextColor="@color/blue_58"
+        app:title="供应商认证"
+        app:titleColor="@color/white"></com.vondear.rxtools.view.RxTitle>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:my_ll_border_color="@color/top_color2"
+                app:my_ll_border_width="0.5dp"
+                app:my_ll_corner_radius="8dp"
+                app:my_ll_solid="@color/white">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="90dp"
+                    android:background="@mipmap/img48"
+                    android:gravity="center_horizontal" />
+            </com.github.customview.MyLinearLayout>
+
+            <com.github.customview.MyCheckBox
+                android:id="@+id/cb_supper_Company"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="企业"
+                android:textSize="14sp"
+                app:my_checkbox_checked="@mipmap/img49"
+                app:my_checkbox_checked_color="@color/red_ff_77"
+                app:my_checkbox_checked_drawable="left"
+                app:my_checkbox_normal="@mipmap/img51"
+                app:my_checkbox_normal_color="@color/c_2c2c2c" />
+
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:my_ll_border_color="@color/top_color2"
+                app:my_ll_border_width="0.5dp"
+                app:my_ll_corner_radius="8dp"
+                app:my_ll_solid="@color/white">
+
+                <ImageView
+                    android:layout_width="111dp"
+                    android:layout_height="80dp"
+                    android:background="@mipmap/img50"
+                    android:gravity="center_horizontal" />
+            </com.github.customview.MyLinearLayout>
+
+            <com.github.customview.MyCheckBox
+                android:id="@+id/cb_supper_Person"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="个人"
+                android:textSize="14sp"
+                app:my_checkbox_checked="@mipmap/img49"
+                app:my_checkbox_checked_color="@color/red_ff_77"
+                app:my_checkbox_checked_drawable="left"
+                app:my_checkbox_normal="@mipmap/img51"
+                app:my_checkbox_normal_color="@color/c_2c2c2c" />
+
+
+            <com.github.customview.MyTextView
+                android:id="@+id/tv_Next"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:my_tv_corner_radius="3dp"
+                app:my_tv_solid="@color/red_ff_77" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

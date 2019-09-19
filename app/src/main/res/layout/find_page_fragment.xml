@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/pl_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp">
+
+        <ImageView
+            android:id="@+id/iv_Left_onclick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:src="@mipmap/img82"
+            android:visibility="gone" />
+
+        <com.github.customview.MyEditText
+            android:id="@+id/tv_find_search"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="搜索关键词或者商品条形码"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:textColor="@color/c_2c2c2c"
+            android:textColorHint="@color/c_bfbfbf"
+            android:textSize="13sp"
+            app:my_et_corner_radius="17dp"
+            app:my_et_hiddenClear="true"
+            app:my_et_solid="@color/white" />
+
+
+        <com.github.customview.MyTextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:drawableRight="@mipmap/img1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#d7d7d7" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tablayout_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            app:tl_divider_padding="10dp"
+            app:tl_indicator_color="@color/red_ff_77"
+            app:tl_indicator_width="40dp"
+            app:tl_textSelectColor="@color/red_ff_77"
+            app:tl_textUnselectColor="#333333"
+            app:tl_textsize="14sp"></com.flyco.tablayout.CommonTabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_tia_second"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+</LinearLayout>
